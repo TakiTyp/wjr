@@ -1,0 +1,117 @@
+WjrCategory:
+  actAs:
+    Timestampable: ~
+  columns:
+    name:
+      type: string(255)
+      notnull:  true
+ 
+WjrArticle:
+  actAs: { Timestampable: ~ }
+  columns:
+    category_id:  { type: integer, notnull: true }
+    title:        { type: string(100), notnull:true }
+    short_desc:   { type: string(1000), notnull:true }
+    description:  { type: string(4000), notnull: true }
+    logo:         { type: string(255) }
+    is_activated: { type: boolean, notnull: true, default: 1 }
+  relations:
+    WjrCategory: { onDelete: CASCADE, local: category_id, foreign: id }
+    
+WjrPig:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    nick:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    description:
+      type: string()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    email:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    public_me:
+      type: boolean
+      fixed: false
+      unsigned: false
+      primary: false
+      default: true
+      notnull: true
+      autoincrement: false
+    latitude:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    longitude:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    picture:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    is_activated:
+      type: boolean
+      fixed: false
+      unsigned: false
+      primary: false
+      default: true
+      notnull: true
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+
+WjrTrip:
+  actAs: { Timestampable: ~ }
+  columns:
+    title:        { type: string(100), notnull:true }
+    short_desc:   { type: string(1000), notnull:true }
+    description:  { type: string(4000), notnull: true }
+    logo:         { type: string(255) }
+    is_activated: { type: boolean, notnull: true, default: 1 }
+
+WjrInfo:
+  actAs: { Timestampable: ~ }
+  columns:
+    title:        { type: string(100), notnull:true }
+    description:  { type: string(4000), notnull: true }
+  

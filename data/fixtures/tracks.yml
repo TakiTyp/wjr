@@ -1,0 +1,20 @@
+WjrTrack:
+  track1:
+    name: ujezdzanie_23-24.06.12.gpx
+    lat_start: 51.118045807
+    lon_start: 18.874620438
+    lat_stop: 51.118240356
+    lon_stop: 18.874538422
+    title: Nocne ujezdzanie
+    points: 666
+    description: bla blab bla bla bla
+    
+  track2:
+    name: lodz_29.06.2012.gpx
+    lat_start: 51.118045807
+    lon_start: 18.874620438
+    lat_stop: 51.757816315
+    lon_stop: 19.430551529
+    title: Nocne ujezdzanie
+    points: 123
+    description: bla blab bla bla bla

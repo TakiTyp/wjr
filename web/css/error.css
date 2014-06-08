@@ -1,0 +1,34 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #231f20;
+	color: #FFCC00;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 30px;
+}
+
+#CONTAINER {
+	text-align: center;
+}
+
+img {
+	margin: 10px;
+	padding: 3px;
+}
+
+img:hover {
+	padding: 0px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #FFCC00;
+	border-radius:8px 8px;	/* CSS3; corners rounding */
+}
+
+a {
+	text-decoration: none;
+	color: #FFCC00;
+}

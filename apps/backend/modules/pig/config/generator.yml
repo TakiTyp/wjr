@@ -1,0 +1,38 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           WjrPig
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          wjr_pig
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        id: { label: Nr }
+        nick: { label: Imię }
+        email: { label: Email }
+        latitude: { label: Szerokość }
+        longitude: { label: Wysokość }
+        picture: { label: Zdjęcie }
+        description: { label: Opis }
+        public_me: { label: Pokazać email?}
+        is_activated: { label: Aktywny? }
+        created_at: { label: Utworzony }
+        updated_at: { label: Aktualizowany }
+      list:
+        title: Zarządzanie chlewem
+        display: [=id, nick, email, latitude, longitude, picture, is_activated, created_at, updated_at]
+        sort: [updated_at, desc]
+      filter:  ~
+      form:
+        class: BackendWjrPigForm
+      edit:
+        title: Edycja świni "%%id%%"
+      new:
+        title: Nowa świnia

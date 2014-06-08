@@ -1,0 +1,65 @@
+.pigs
+{
+ width: 500px;
+ margin: 0 auto;
+}
+
+.pigs tr.even
+{
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.pigs tr.odd
+{
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.pigs tr:hover
+{
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.pigs td
+{
+  padding: 10px 10px;
+  border-bottom: 1px dotted #999;
+}
+
+.pigs td.coordinates,
+.pigs td.picture
+{
+  border-right: 1px dotted #999;
+}
+
+.pigs td.picture
+{
+  padding: 2px 5px;
+}
+
+.pigs .picture
+{
+}
+
+.pigs .info
+{
+  color: #d2813f;
+  width: 30%;
+}
+
+.pigs .coordinates
+{
+  padding: 0;
+  width: 70%;
+}
+
+.pigs .coordinates a
+{
+  padding: 12px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.pigs .coordinates a:hover
+{
+  text-decoration: underline;
+}

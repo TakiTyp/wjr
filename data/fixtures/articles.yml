@@ -1,0 +1,41 @@
+WjrArticle:
+  o_rowerze:
+    WjrCategory: rower
+    title: Słowo o rowerze
+    short_desc: Oto kilka słow na temat roweru...
+    description: |
+      Oto kilka słow na temat roweru...
+      Artykuł o rowerze i nie ma chuja
+      Jak tatuś zrobi dziubek to nie ma chuja we wśi
+      Nie chce mi się z Tobą gadać...
+    logo: zabcia.gif
+    is_activated: true
+  
+  o_rowerze_piesn:
+    WjrCategory: rower
+    title: Łoweł
+    short_desc: Taki ałtykuł o łowerze
+    description: |
+      Jade, jade na rowerze
+      włosy mi rozwiewa wiatr
+      Mam na sobie czarne spodnie
+      A na głowie czarny kask...
+    logo: tele.jpg
+    is_activated: true
+  
+  miejscowka_ok:
+    WjrCategory: miejscowki
+    title: Najlepsze miejscówki to...
+    short_desc: Czyli o tym gdzie najlepiej i co w ogóle
+    description: |
+      Najlepsza na świecie jest miłość w klozecie
+    logo: dancing.gif
+    is_activated: true
+  
+  bez_loga:
+    WjrCategory: swinia
+    title: Najlepsze miejscówki to...
+    short_desc: AAAAAAAAAAaaaaaaaaaaaaaa
+    description: |
+      Assdasdsa adasdas ADSASDasdasdsa
+    is_activated: true

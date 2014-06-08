@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           WjrInfo
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          wjr_info
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        title: { label: Tytuł }
+        description: { label: Treść, help: Właściwa treść artykułu }
+        created_at: { label: Utworzony }
+        updated_at: { label: Aktualizowany }
+      list:
+        title: Strona główna, sklep, kontakt
+        display: [=title, created_at, updated_at]
+      filter:  ~
+      form:    ~
+      edit:
+        title: Edycja "%%title%%"
+      new:
+        title: Nowy

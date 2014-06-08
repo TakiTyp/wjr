@@ -1,0 +1,24 @@
+h3 {
+	margin-bottom: 10px;
+}
+
+p.small {
+	margin:  10px 0px 0px 0px;
+	padding: 0px 5px 0px 0px;
+	text-align: right;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius:6px 5px;	/* CSS3; corners rounding */
+	margin-bottom: 10px;
+}
+
+img.details_mini_img {
+	height: 100px;
+	width: 100px;
+	float: left;
+	padding: 5px 10px 5px 5px;
+}
+
+img.pig_center_img {
+	display: block;
+	margin: auto;
+}

@@ -1,0 +1,37 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           WjrArticle
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          wjr_article
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        category_id: { label: Kategoria }
+        category_name: { label: Kategoria }
+        WjrCategory: { label: Kategoria }
+        title: { label: Tytuł }
+        short_desc: { label: Krótki opis, help: Skrócony opis artykułu na głównej stronie }
+        description: { label: Treść, help: Właściwa treść artykułu }
+        is_activated: { label: Aktywny?, help: Pokazać artykuł? }
+        created_at: { label: Utworzony }
+        updated_at: { label: Aktualizowany }
+      list:
+        title: Zarządzanie artykułami
+        display: [=title, short_desc, WjrCategory, logo, is_activated, created_at, updated_at]
+        sort: [updated_at, desc]
+        table_method: retrieveBackendArticleList
+      filter:  ~
+      form:
+        class: BackendWjrArticleForm
+      edit:
+        title: Edycja artykułu "%%title%%"
+      new:
+        title: Nowy artykuł

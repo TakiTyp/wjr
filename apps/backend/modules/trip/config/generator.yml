@@ -1,0 +1,36 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           WjrTrip
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          wjr_trip
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        title: { label: Tytuł }
+        short_desc: { label: Krótki opis, help: Skrócony opis artykułu na głównej stronie }
+        description: { label: Treść, help: Właściwa treść artykułu }
+        is_activated: { label: Aktywny?, help: Pokazać artykuł? }
+        has_track: { label: Dodać trasę?, help: Wybrana trasa ukaże się w artykule }
+        track_id: { label: Trasa }
+        created_at: { label: Utworzony }
+        updated_at: { label: Aktualizowany }
+      list:
+        title: Zarządzanie tripami
+        display: [=title, short_desc, is_activated, created_at, updated_at]
+        sort: [updated_at, desc]
+        table_method: retrieveBackendTripList
+      filter:  ~
+      form:
+        class: BackendWjrTripForm
+      edit:
+        title: Edycja tripu "%%title%%"
+      new:
+        title: Nowy trip

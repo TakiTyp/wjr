@@ -1,0 +1,58 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+article:
+  class:   sfDoctrineRouteCollection
+  options: { model: WjrArticle }
+  
+article_show_user:
+  url:   /article/:id/:title_slug
+  class: sfDoctrineRoute
+  options: { model: WjrArticle, type: object }
+  param: { module: article, action: show }
+  requirements:
+    id: \d+
+    sf_method: [get]
+
+trip:
+  class:   sfDoctrineRouteCollection
+  options: { model: WjrTrip }
+  
+trip_show_user:
+  url:   /trip/:id/:title_slug
+  class: sfDoctrineRoute
+  options: { model: WjrTrip, type: object }
+  param: { module: trip, action: show }
+  requirements:
+    id: \d+
+    sf_method: [get]
+
+pig:
+  class:   sfDoctrineRouteCollection
+  options: { model: WjrPig }
+
+shop:
+  url:   /shop
+  param: { module: info, action: show, id: 2 }
+
+contact:
+  url:   /contact
+  param: { module: info, action: show, id: 3 }
+  
+rental:
+  url:   /rental
+  param: { module: info, action: show, id: 4 }
+  
+# default rules
+homepage:
+  url:   /
+  param: { module: info, action: show, id: 1 }
+  
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

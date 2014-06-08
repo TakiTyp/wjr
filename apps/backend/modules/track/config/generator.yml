@@ -1,0 +1,32 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           WjrTrack
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          wjr_track
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        name:         { label: Plik }
+        title:        { label: Tytuł, help: Krótki tytuł trasy }
+        description:  { label: Opis }
+        created_at:   { label: Utworzony }
+        updated_at:   { label: Aktualizowany }
+      list:
+        title:    Lista tras
+        display:  [=name, title, created_at, updated_at]
+        sort:     [updated_at, desc]
+      filter:  ~
+      form:
+        class: BackendWjrTrackForm
+      edit:
+        title: Edycja trasy "%%name%%"
+      new:
+        title: Nowa trasa

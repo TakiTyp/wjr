@@ -1,0 +1,19 @@
+div.trip_desc {
+	min-height: 155px;
+}
+
+#GPX_MAP {
+	width: 500px;
+	height: 500px;
+	margin: auto;
+	padding: 10px;
+	border-style: outset;
+	border-width: 2px;
+	border-color: #FFCC00;
+	background-color: #000000;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+}

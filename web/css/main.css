@@ -1,0 +1,244 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #000000;
+	color: #FFCC00;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 30px 30px 0px 30px;
+}
+
+#CONTAINER {
+	margin: auto;
+}
+
+#HEADER {
+	width: 1000px;  /* 1160 - 2*border-width */
+	height: 90px;
+	margin: auto;
+	margin-bottom: 15px;
+}
+
+#CONTENT {
+	background-image: url('/images/background.gif');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 1000px;
+	height: 1200px;
+	margin: auto;
+}
+
+#CONTENT_LEFT {
+	float: left;
+	padding: 20px 5px 20px 20px;
+}
+
+#CONTENT_RIGHT {
+	text-align: center;
+	float: right;
+	padding: 20px 20px 20px 5px;
+}
+
+#CONTENT_RIGHT .CONTENT_RIGHT_element {
+	width: 265px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFCC00;
+	border-radius:6px 5px;	/* CSS3; corners rounding */
+	box-shadow: 10px 10px 5px #222;	/* CSS3; shadows */
+	background-color: rgba(0, 0, 0, 0.85);
+	margin-top: 15px;
+}
+
+#CONTENT_RIGHT .CONTENT_RIGHT_element img{
+	width: 265px;
+}
+
+#INFO {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFCC00;
+	border-radius:6px 5px;	/* CSS3; corners rounding */
+	box-shadow: 10px 10px 5px #222;	/* CSS3; shadows */
+	width: 670px; /* 630 - 2*margin - 2*border-width */
+	max-height: 1150px; /* 1200 - 2*CONTENT_LEFT.padding-top+bottom */
+	background-color: rgba(0, 0, 0, 0.93);
+	overflow-y: scroll;
+}
+
+#INFO .padding {
+	padding: 20px;
+}
+
+#INFO h2 {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 15px;
+}
+
+#NAVI {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFCC00;
+	border-radius:6px 5px;	/* CSS3; corners rounding */
+	box-shadow: 10px 10px 5px #222;	/* CSS3; shadows */
+	height: 260px;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#NAVINET {
+	background-color: rgba(0, 0, 0, 0.7);
+	border-collapse:collapse;
+	margin: auto;
+	margin-top: 10px;
+}
+
+#NAVINET td {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFCC00;
+	width: 46px;
+	height: 46px;
+	padding: 0;
+	margin: 0;
+	font-size: 0;	/* to remove break at bottom td beetwen img in table */
+}
+
+#NAVINET td img {
+	border: 0;
+}
+
+#NAVINET td._strefa {
+	background: #FFCC00;
+}
+
+#FOOTER {
+	clear: both;
+	margin: auto;
+	width: 1000px;
+	background-color: #606060;
+	color: #202020;
+}
+
+#FOOTER .footer_top {
+	height: 30px;
+	background-image: url('/images/footer/grad_top.jpg');
+	background-repeat: repeat-x;
+}
+
+#FOOTER .padding {
+	margin: 5px 30px 5px 30px;
+	padding: 10px;
+	border-radius:6px 5px;	/* CSS3; corners rounding */
+	background-color: #787878;
+}
+
+#FOOTER .footer_bottom {
+	height: 15px;
+}
+
+#FOOTER a {
+	text-decoration: none;
+	font-weight:bold;
+	color: #FFCC00;
+}
+
+#FOOTER a:hover {
+	color: #FFFFFF;
+}
+
+#ALTNAVI_top {
+	background-image: url('/images/header/menu.png');
+	background-repeat: no-repeat;
+	background-position: right center;
+	width: 400px;
+	height: 70px;
+	float: right;
+	text-align: right;
+	padding-top: 35px;
+}
+
+#ALTNAVI_top a {
+	text-decoration: none;
+	font-size: 20px;
+	color: #FFFFFF;
+	padding-right: 20px;
+}
+
+#ALTNAVI_bottom {
+	width: 350px;
+	float: right;
+	text-align: right;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+img {
+	border: 0px;
+}
+
+div.clear {
+	clear: both;
+}
+
+div.flash_notice {
+	background: url('/sfDoctrinePlugin/images/tick.png') no-repeat 10px 4px #FFCC00;
+	border-radius:6px 5px;	/* CSS3; corners rounding */
+	color: #000000;
+	font-weight: bold;
+	padding: 2px 30px;
+	margin-bottom: 10px;
+}
+
+div.back {
+	width: 40px;
+	background: url('/images/previous.png') no-repeat 10px 4px #FFCC00;
+	border-radius:6px 5px;	/* CSS3; corners rounding */
+	color: #000000;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 3px 40px;
+	display: inline;
+}
+
+div.main_proposition {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FFCC00;
+	border-radius:6px 5px;	/* CSS3; corners rounding */
+	width: 100%;
+	background-color: #000000;
+	margin-bottom: 15px;
+}
+
+div.main_proposition  table{
+	border-collapse:collapse
+}
+
+div.main_proposition  td.logo {
+    padding: 0px 5px 0px 0px;
+}
+
+.fanbar{
+	margin: 0px 0px 15px 0px !important;
+	padding: 10px 0px;
+}
+
+.fanbar > div {
+	display: inline-block;
+}
+
+.fanbar > div:nth-child(2) {
+	padding-left: 20px;
+	position: relative;
+	top: 3px;
+}

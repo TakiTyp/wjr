@@ -1,0 +1,28 @@
+WjrPig:
+  swinia1:
+    nick: zdzichu
+    description: Burdel na kółkach
+    latitude: 51.116239
+    longitude: 18.863132
+    picture: chuck_norris.gif
+    email: zdzichu@swinia.pl
+    public_me: true
+
+  swinia2:
+    nick: janek
+    description: ło kurwa
+    latitude: 51.117559
+    longitude: 18.873328
+    email: janek@swinia.pl
+    public_me: false
+
+<?php for ($i = 100; $i <= 130; $i++): ?>
+  pig_<?php echo $i ?>:
+    nick:      nick <?php echo $i."\n" ?>
+    latitude:     51.117<?php echo $i."\n" ?>
+    longitude:     18.873<?php echo $i."\n" ?>
+    description:  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    email:    email<?php echo $i ?>@swinia.pl<?php echo "\n" ?>
+    public_me: true
+ 
+<?php endfor ?>
