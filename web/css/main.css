@@ -167,6 +167,19 @@ body {
 	font-size: 20px;
 	color: #FFFFFF;
 	padding-right: 20px;
+	transition: all 0.5s ease 0s;
+	position: relative;
+	bottom: 0px;
+}
+
+#ALTNAVI_top a:hover {
+	bottom: 4px;
+	text-shadow: 20px 10px 4px #fff;
+}
+
+#HOME_ICON {
+	position: relative;
+	top: 3px;
 }
 
 #ALTNAVI_bottom {
@@ -241,4 +254,75 @@ div.main_proposition  td.logo {
 	padding-left: 20px;
 	position: relative;
 	top: 3px;
+}
+
+/*******************
+  Galeria plakatow
+*******************/
+#POSTER_GALLERY {
+    margin: 60px auto;
+    overflow: visible;
+    position: relative;
+    text-align: center;
+    width: 630px;
+	perspective: 1000px;
+	perspective-origin: 80% 50%;
+	-webkit-perspective: 1000px;
+	-webkit-perspective-origin: 80% 50%;
+}
+ 
+img.poster {
+    height: 200px;
+    transition-duration: 0.7s;
+    transition-property: transform;
+	transform:rotateY(60deg);
+    -webkit-transition-duration: 0.7s;
+    -webkit-transition-property: transform;
+	-webkit-transform:rotateY(60deg);
+    width: 135px;
+}
+
+img.poster:hover {
+    transition-duration: 0.7s;
+    transition-property: transform;
+	transform:rotateY(0deg) scale(2,2);
+    -webkit-transition-duration: 0.7s;
+    -webkit-transition-property: transform;
+	-webkit-transform:rotateY(0deg) scale(2,2);
+    z-index: 1000;
+}
+
+
+
+
+.tooltip{
+    display: inline;
+    position: relative;
+	font-size: 12px;
+	transition: all 0.5s ease 0s;
+}
+
+.tooltip:hover:after{
+    background: #333;
+    background: rgba(255,240,0,0.8);
+    border-radius: 5px;
+    bottom: 60px;
+    color: #fff;
+    content: attr(title);
+    left: -100%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 110px;
+}
+
+.tooltip:hover:before{
+    border: solid;
+    border-color: #ffcc00 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 54px;
+    content: "";
+    left: 36%;
+    position: absolute;
+    z-index: 99;
 }

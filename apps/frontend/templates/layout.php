@@ -56,7 +56,7 @@
 	<div id="CONTAINER">
 		<div id="HEADER">
 				<div id="ALTNAVI_top">
-					<a href="<?php echo url_for('article') ?>">info</a>
+					<a href="<?php echo url_for('homepage') ?>"><img id="HOME_ICON" src="/images/home.png" alt="Strona g³ówna" title="Strona g³ówna" /></a>
 					<a href="<?php echo url_for('pig') ?>">chlew</a>
 					<a href="<?php echo url_for('trip') ?>">trip</a>
 					<a href="<?php echo url_for('@shop') ?>">sklep</a>
@@ -90,7 +90,7 @@
 							<td></td>
 							<td></td>
 							<td class="_strefa">
-								<a href="<?php echo url_for('article') ?>"><img src="/images/navi/strefa_artykul.jpg" alt="strefa_artykul" /></a>
+								<a class="tooltip" title="Trip..." href="<?php echo url_for('trip') ?>"><img src="/images/navi/strefa_trip.jpg" alt="strefa_trip" /></a>
 							</td>
 							<td></td>
 							<td></td>
@@ -100,15 +100,15 @@
 						</tr>
 						<tr>
 							<td class="_strefa">
-								<a href="<?php echo url_for('@shop') ?>"><img src="/images/navi/strefa_uslugi.jpg" alt="strefa_uslugi" /></a>
+								<a  class="tooltip" title="Sklep..." href="<?php echo url_for('@shop') ?>"><img src="/images/navi/strefa_uslugi.jpg" alt="strefa_uslugi" /></a>
 							</td>
 							<td></td>
 							<td class="_strefa">
-								<a href="<?php echo url_for('trip') ?>"><img src="/images/navi/strefa_trip.jpg" alt="strefa_trip" /></a>
+								<a class="tooltip" title="Strona g³ówna..." href="<?php echo url_for('homepage') ?>"><img src="/images/navi/strefa_artykul.jpg" alt="strefa_artykul" /></a>
 							</td>
 							<td></td>
 							<td class="_strefa">
-								<a href="<?php echo url_for('pig') ?>"><img src="/images/navi/strefa_swinia.jpg" alt="strefa_swinia" /></a>
+								<a class="tooltip" title="Œwinia..." href="<?php echo url_for('pig') ?>"><img src="/images/navi/strefa_swinia.jpg" alt="strefa_swinia" /></a>
 							</td>
 						</tr>
 						<tr>
@@ -118,7 +118,7 @@
 							<td></td>
 							<td></td>
 							<td class="_strefa">
-								<a href="<?php echo url_for('@contact') ?>"><img src="/images/navi/strefa_kontakt.jpg" alt="strefa_kontakt" /></a>
+								<a class="tooltip" title="Kontakt..." href="<?php echo url_for('@contact') ?>"><img src="/images/navi/strefa_kontakt.jpg" alt="strefa_kontakt" /></a>
 							</td>
 							<td></td>
 							<td></td>

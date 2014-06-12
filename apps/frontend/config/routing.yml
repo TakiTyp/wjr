@@ -43,6 +43,10 @@ rental:
   url:   /rental
   param: { module: info, action: show, id: 4 }
   
+ujezdzanie:
+  url:   /ujezdzanie
+  param: { module: info, action: show, id: 5 }
+  
 # default rules
 homepage:
   url:   /
