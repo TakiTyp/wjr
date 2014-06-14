@@ -33,8 +33,35 @@ class tripActions extends sfActions
     //$this->forward404Unless($this->wjr_trip);
 	
 	$this->wjr_trip = Doctrine_Core::getTable('WjrTrip')->getTrips($request->getParameter('id'));
+	// pobrnie obiektu trasy
+	//$this->wjr_track = Doctrine_Core::getTable('WjrTrack')->find(array($this->wjr_trip->getTrackId()));
+	
     $this->forward404Unless($this->wjr_trip);
   }
+  
+  public function executeDownload(sfwebRequest $request)
+  {
+	$filePath = 'uploads/tracks/'.$request->getParameter('track_name');
+	$this->forward404Unless($filePath);
+	/** @var $response sfWebResponse */
+	$response = $this->getResponse();
+	$response->clearHttpHeaders();
+	$response->setHttpHeader('Content-Type', 'text/plain');
+	$response->setHttpHeader('Content-Disposition', 'attachment; filename="' . basename($filePath) . '"');
+	$response->setHttpHeader('Content-Description', 'File Transfer');
+	$response->setHttpHeader('Content-Transfer-Encoding', 'binary');
+	$response->setHttpHeader('Content-Length', filesize($filePath));
+	$response->setHttpHeader('Cache-Control', 'public, must-revalidate');
+	// if https then always give a Pragma header like this  to overwrite the "pragma: no-cache" header which
+	// will hint IE8 from caching the file during download and leads to a download error!!!
+	$response->setHttpHeader('Pragma', 'public');
+	//$response->setContent(file_get_contents($filePath)); # will produce a memory limit exhausted error
+	$response->sendHttpHeaders();
+
+	ob_end_flush();
+	return $this->renderText(readfile($filePath));
+  }
+  
 /*
   public function executeNew(sfWebRequest $request)
   {

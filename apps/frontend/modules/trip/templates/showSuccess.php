@@ -144,11 +144,20 @@
 		    init();
 		  </script>
         </div>
+		<div id="map_tools">
+		  <a href="<?php echo url_for('trip/download?track_name='.$wjr_trip['gpx_name']) ?>">
+		    <div id="download_btn" class="map_tool_btn">
+			  <p>Pobierz</p>
+		    </div>
+		  </a>
+		  <a class="map_large" href="/_map_large.php?track_name=<?php echo url_for('trip/download?track_name='.$wjr_trip['gpx_name']) ?>" title="<?php echo $wjr_trip['gpx_title'] ?>">
+		    <div id="fullscreen_btn" class="map_tool_btn">
+			  <p>Powiększ</p>
+		    </div>
+		  </a>
+		</div>
       </div>
-      
-      <p><a class="map_large" href="/_map_large.php" title="<?php echo $wjr_trip['gpx_title'] ?>">Większa mapa</a></p>
-      
-    <?php endif; ?>
+	<?php endif; ?>
     <div class="clear"></div>
     <p class="small">Opublikowano:&nbsp;<?php echo $wjr_trip->getDateTimeObject('created_at')->format('d/m/Y') ?></p>
   </div>
