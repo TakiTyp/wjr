@@ -104,11 +104,11 @@
 							</td>
 							<td></td>
 							<td class="_strefa">
-								<a class="tooltip" title="Strona g³ówna..." href="<?php echo url_for('homepage') ?>"><img src="/images/navi/strefa_artykul.jpg" alt="strefa_artykul" /></a>
+								<a class="tooltip" title="Strona glowna..." href="<?php echo url_for('homepage') ?>"><img src="/images/navi/strefa_artykul.jpg" alt="strefa_artykul" /></a>
 							</td>
 							<td></td>
 							<td class="_strefa">
-								<a class="tooltip" title="Œwinia..." href="<?php echo url_for('pig') ?>"><img src="/images/navi/strefa_swinia.jpg" alt="strefa_swinia" /></a>
+								<a class="tooltip" title="Swinia..." href="<?php echo url_for('pig') ?>"><img src="/images/navi/strefa_swinia.jpg" alt="strefa_swinia" /></a>
 							</td>
 						</tr>
 						<tr>
