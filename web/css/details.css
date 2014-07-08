@@ -6,9 +6,10 @@ p.small {
 	margin:  10px 0px 0px 0px;
 	padding: 0px 5px 0px 0px;
 	text-align: right;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(238, 51, 37, 0.7);
 	border-radius:6px 5px;	/* CSS3; corners rounding */
 	margin-bottom: 10px;
+	color: #000;
 }
 
 img.details_mini_img {

@@ -53,10 +53,10 @@
 	  js.src = "//connect.facebook.net/pl_PL/all.js#xfbml=1";
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
-	<div id="CONTAINER">
+	<div id="HEADER_wrapper">
 		<div id="HEADER">
 				<div id="ALTNAVI_top">
-					<a href="<?php echo url_for('homepage') ?>"><img id="HOME_ICON" src="/images/home.png" alt="Strona g³ówna" title="Strona g³ówna" /></a>
+					<a href="<?php echo url_for('homepage') ?>" class="home_icon"><img src="/images/home.png" alt="Strona glowna" title="Strona glowna" /></a>
 					<a href="<?php echo url_for('pig') ?>">chlew</a>
 					<a href="<?php echo url_for('trip') ?>">trip</a>
 					<a href="<?php echo url_for('@shop') ?>">sklep</a>
@@ -64,73 +64,74 @@
 				</div>
 				<h1><a href="<?php echo url_for('homepage') ?>"><img src="/images/header/logo.png" alt="logo" /></a></h1>
 		</div>
-		<div id="CONTENT">
-			<div id="CONTENT_LEFT">
-				<div id="INFO">
-					<div class="padding">
-						<?php if ($sf_user->hasFlash('notice')): ?>
-						  <div class="flash_notice"><?php echo $sf_user->getFlash('notice') ?></div>
-						<?php endif ?>
-						<?php echo $sf_content ?>
-					</div>
+		<div id="HEADER_separator"></div>
+	</div>
+	<div id="CONTAINER">
+		<div id="CONTENT_LEFT">
+			<div id="INFO">
+				<div class="padding">
+					<?php if ($sf_user->hasFlash('notice')): ?>
+					  <div class="flash_notice"><?php echo $sf_user->getFlash('notice') ?></div>
+					<?php endif ?>
+					<?php echo $sf_content ?>
 				</div>
 			</div>
-			<div id="CONTENT_RIGHT">
-				<div class="CONTENT_RIGHT_element fanbar">
-					<div>
-						<fb:like href="http://wartajuraroweru.pl/" send="false" layout="box_count" width="450" show_faces="true" colorscheme="light"></fb:like>
-					</div>
-					<div>
-						<div class="g-plusone" data-size="tall" data-href="http://wartajuraroweru.pl/"></div>
-					</div>
+		</div>
+		<div id="CONTENT_RIGHT">
+			<div class="CONTENT_RIGHT_element fanbar">
+				<div>
+					<fb:like href="http://wartajuraroweru.pl/" send="false" layout="box_count" width="450" show_faces="true" colorscheme="light"></fb:like>
 				</div>
-				<div id="NAVI">
-					<table id="NAVINET">
-						<tr>
-							<td></td>
-							<td></td>
-							<td class="_strefa">
-								<a class="tooltip" title="Trip..." href="<?php echo url_for('trip') ?>"><img src="/images/navi/strefa_trip.jpg" alt="strefa_trip" /></a>
-							</td>
-							<td></td>
-							<td></td>
-						</tr>
-						<tr>
-							<td></td><td></td><td></td><td></td><td></td>
-						</tr>
-						<tr>
-							<td class="_strefa">
-								<a  class="tooltip" title="Sklep..." href="<?php echo url_for('@shop') ?>"><img src="/images/navi/strefa_uslugi.jpg" alt="strefa_uslugi" /></a>
-							</td>
-							<td></td>
-							<td class="_strefa">
-								<a class="tooltip" title="Strona glowna..." href="<?php echo url_for('homepage') ?>"><img src="/images/navi/strefa_artykul.jpg" alt="strefa_artykul" /></a>
-							</td>
-							<td></td>
-							<td class="_strefa">
-								<a class="tooltip" title="Swinia..." href="<?php echo url_for('pig') ?>"><img src="/images/navi/strefa_swinia.jpg" alt="strefa_swinia" /></a>
-							</td>
-						</tr>
-						<tr>
-							<td></td><td></td><td></td><td></td><td></td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td class="_strefa">
-								<a class="tooltip" title="Kontakt..." href="<?php echo url_for('@contact') ?>"><img src="/images/navi/strefa_kontakt.jpg" alt="strefa_kontakt" /></a>
-							</td>
-							<td></td>
-							<td></td>
-						</tr>
-					</table>
+				<div>
+					<div class="g-plusone" data-size="tall" data-href="http://wartajuraroweru.pl/"></div>
 				</div>
-				<div class="CONTENT_RIGHT_element">
-					<a href="<?php echo url_for('@rental') ?>"><h3>Wypozyczalnia Rowerow</h3><p>Sprawdz oferte</p></a>
-				</div>
-				<div class="CONTENT_RIGHT_element">
-					<a href="<?php echo url_for('@shop') ?>"><img src="/images/wizytowka_a_goslawski.png" alt="sklep" /></a>
-				</div>
+			</div>
+			<div id="NAVI">
+				<table id="NAVINET">
+					<tr>
+						<td></td>
+						<td></td>
+						<td class="_strefa">
+							<a class="tooltip" title="Trip..." href="<?php echo url_for('trip') ?>"><img src="/images/navi/strefa_trip.jpg" alt="strefa_trip" /></a>
+						</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td><td></td><td></td><td></td><td></td>
+					</tr>
+					<tr>
+						<td class="_strefa">
+							<a  class="tooltip" title="Sklep..." href="<?php echo url_for('@shop') ?>"><img src="/images/navi/strefa_uslugi.jpg" alt="strefa_uslugi" /></a>
+						</td>
+						<td></td>
+						<td class="_strefa">
+							<a class="tooltip" title="Strona glowna..." href="<?php echo url_for('homepage') ?>"><img src="/images/navi/strefa_artykul.jpg" alt="strefa_artykul" /></a>
+						</td>
+						<td></td>
+						<td class="_strefa">
+							<a class="tooltip" title="Swinia..." href="<?php echo url_for('pig') ?>"><img src="/images/navi/strefa_swinia.jpg" alt="strefa_swinia" /></a>
+						</td>
+					</tr>
+					<tr>
+						<td></td><td></td><td></td><td></td><td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td class="_strefa">
+							<a class="tooltip" title="Kontakt..." href="<?php echo url_for('@contact') ?>"><img src="/images/navi/strefa_kontakt.jpg" alt="strefa_kontakt" /></a>
+						</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<div class="CONTENT_RIGHT_element">
+				<a href="<?php echo url_for('@rental') ?>"><h3>Wypozyczalnia Rowerow</h3><p>Sprawdz oferte</p></a>
+			</div>
+			<div class="CONTENT_RIGHT_element">
+				<a href="<?php echo url_for('@shop') ?>"><img src="/images/wizytowka_a_goslawski.png" alt="sklep" /></a>
 			</div>
 		</div>
 		<div id="FOOTER">
@@ -138,7 +139,7 @@
 			</div>
 			<div class="padding">
 				<div id="ALTNAVI_bottom">
-					<a href="<?php echo url_for('article') ?>">info</a> -
+					<a href="<?php echo url_for('homepage') ?>">start</a> -
 					<a href="<?php echo url_for('pig') ?>">chlew</a> -
 					<a href="<?php echo url_for('trip') ?>">trip</a> -
 					<a href="<?php echo url_for('@shop') ?>">sklep</a> -

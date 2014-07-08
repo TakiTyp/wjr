@@ -3,13 +3,13 @@ div.trip_desc {
 }
 
 #GPX_MAP {
-	width: 500px;
+	/* width: 500px; */
 	height: 500px;
 	margin: auto;
 	padding: 10px;
 	border-style: outset;
 	border-width: 2px;
-	border-color: #FFCC00;
+	border-color: #ee3325;
 	background-color: #000000;
 }
 
